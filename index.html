@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <img src="Finder.png" alt="Logo" id="logo">
+        <ul>
+            <li><a href="#" class="listItems">Home &#x25BE;</a></li>
+            <li><a href="#" class="listItems">Listings &#x25BE;</a></li>
+            <li><a href="#" class="listItems">Account &#x25BE;</a></li>
+            <li><a href="#" class="listItems">Pages &#x25BE;</a></li>
+            <li><a href="#" class="listItems" >Docs &#x25BE;</a></li>
+            <li><a href="#" class="listItems">Components</a></li>
+        </ul>
+        <div id="liftSide">
+            <i class="fa-solid fa-sun" id="mode" onclick="changeMode()"></i>
+            <i class="fa-solid fa-user" id="profile"></i>
+            <a href="#" id="join"> + Join Pro Network</a>
+        </div>
+        
+    </nav>
+    <header>
+        <h1>Explore top-rated certified pros nearby</h1>
+        <form action="">
+            <label for="textInput"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <input type="text" id="textInput" name="textInput" placeholder="What service do you need?">
+            <label for="codeInput"><i class="fa-solid fa-location-dot"></i></label>
+            <input type="text" id="codeInput" name="codeInput" placeholder="Zip code">
+            <button type="submit">Search</button>
+        </form>
+        <div id="buttonContainer">
+            <button>Handyperson</button>
+            <button>Electrician</button>
+            <button>Plumbing</button>
+            <button>Landscaping</button>
+            <button>Roofing</button>
+        </div>
+        <div id="customizebutton" onclick="showing()">
+            <i class="fa-solid fa-gear"></i>customize
+        </div>
+        <div id="grayDiv"></div>
+        <div id="choseColors">
+            <div class="colorItem">
+                <h3>color</h3>
+                <div class="innerColorDiv" onclick="changeColor()">
+                    <p>#333D4C</p>
+                    <div class="circleDiv"></div>
+                </div>
+            </div>
+            <button onclick="closeing()">close</button>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>

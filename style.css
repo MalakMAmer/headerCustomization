@@ -1,0 +1,313 @@
+/* general */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+:root{
+    --balck-text-muted: rgba(0, 0, 0, 0.6);
+    --white-text-muted: rgba(255, 255, 255, 0.6);
+}
+ul{
+    list-style: none;
+}
+a , li a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+    transition: opacity 200ms ease;
+}
+a:hover , a:focus{
+   opacity: 0.8; 
+   cursor: pointer;
+}
+
+p,h1,h2,h3,h4,h5,h6,a{
+    font-family:'Playfair Display', serif;
+}
+h1,h2,h3,h4,h5,h6{
+    text-transform: capitalize; 
+}
+p{
+    font-size: clamp(1rem, 1vw, 1.1rem);
+    color: black;
+    line-height: 1.6;
+}
+h1{
+    font-size: clamp(3rem, 3.5vw, 4rem);
+}
+h2{
+    font-size: clamp(2.5rem, 3vw, 3.5rem);
+}
+h3{
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+}
+h4{
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+h5{
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+h6{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* nav styles */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5em;
+    align-items: center;
+}
+nav img#logo{
+    width: 8rem;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    border-radius: 4px;
+    padding:0.5rem;
+    margin: 2px;
+    transition: all 300ms ease;
+    color: #333D4C;
+}
+nav ul li:hover{
+    background-color: #f2f3f564;
+    cursor: pointer;
+}
+nav ul li a.listItems{
+    font-size: 1.2rem;
+}
+nav div#liftSide{
+    display: flex;
+    align-items: center;
+}
+nav div#liftSide i#mode{
+    color: #333D4C;
+    padding: 0.5rem;
+    transition: all 50ms ease;
+}
+nav div#liftSide i#profile{
+    color: #333D4C;
+    padding: 0.5rem;
+    transition: all 300ms ease;
+}
+nav div#liftSide i:hover{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+nav div#liftSide a#join{
+    padding: 0.6rem 2rem;
+    border-radius: 5px;
+    margin: 0 1em;
+    background-color: #D85151;
+    color: white;
+}
+
+
+/* header styles */
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #3D7A81;
+    color: white;
+    height: 80vh;
+}
+header h1{
+    padding: 2rem;
+    text-align: center;
+    width: 50%;
+    min-width: 30rem;
+}
+header form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: white;
+    width: 50%;
+    min-width: 25rem;
+    border-radius: 1em;
+}
+header form label{
+    padding: 0.6rem;
+    padding-right: 5px;
+}
+header form label i{
+    color: #333D4C;
+    font-size: 1.5em;
+}
+header form input{ 
+    padding: 0.5rem 3rem;
+    border: none;
+    font-size: 1.2rem;
+}
+header form input:focus{ 
+    outline: none;
+    border: none;
+}
+header form input::placeholder{ 
+    font-size: 1.2rem;
+}
+header form input#textInput{ 
+    padding: 0.5rem;
+    width: 45%;
+    min-width: 15rem;
+}
+header form input#codeInput{ 
+    padding: 0.5rem;
+    width: 15%;
+    min-width: 10rem;
+}
+header form button{ 
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    margin: 0 1em;
+    background-color: #D85151;
+    color: white;
+}
+header form button:hover{ 
+    cursor: pointer;
+    opacity: 0.95;
+}
+header div#buttonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 52%;
+    min-width: 25rem;
+    padding: 1.5rem;
+}
+header div#buttonContainer button{
+    padding: 0.8rem 2rem;
+    border-radius: 1em;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all 200ms ease;
+}
+header div#buttonContainer button:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* main task */
+
+header div#customizebutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1.2rem;
+    color: #333D4C;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 1em;
+    position: absolute;
+    transition: all 300ms ease;
+    transform: rotate(90deg);
+    right: -1px;
+    font-size: 1.2rem;
+}
+header div#customizebutton i{
+    padding: 5px;
+}
+header div#customizebutton:hover{
+    border: none;
+    cursor: pointer;
+}
+header div#grayDiv{
+    width: 100%;
+    height: 110vh;
+    position: fixed;
+    /* display: block; */
+    background-color: #333D4C40;
+    display: none;
+    transition: all 200ms ease;
+}
+header div#choseColors{
+    position: absolute;
+    right: -0px;
+    top: -0px;
+    z-index: 5;
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100vh;
+    background-color: white;
+    transition: all 200ms ease;
+    display: none;
+}
+header div#choseColors div.colorItem {
+    padding: 0.5rem;
+}
+header div#choseColors div.colorItem h3{
+    color: #333D4C;
+    padding: 0.5rem 0;
+}
+header div#choseColors div.colorItem div.innerColorDiv{
+    padding: 0.5rem;
+    border: 1px solid #333D4C;
+    display: flex;
+    align-items: center;
+    transition: all 200ms ease;
+}
+header div#choseColors div.colorItem div.innerColorDiv:hover{
+    opacity: 0.9;
+    background-color: #F2F3F5;
+    cursor: pointer;
+}
+header div#choseColors div.colorItem div.innerColorDiv p{
+    padding: 0.5rem;
+}
+header div#choseColors div.colorItem div.innerColorDiv div.circleDiv{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2em;
+    background-color: #333D4C;
+}
+header div#choseColors button{
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    margin: 0 1em;
+    background-color: #D85151;
+    color: white;
+    transition: all 200ms ease;
+}
+header div#choseColors button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+@media (max-width:600px){
+    nav ul{
+        display: none;
+    }
+    header{
+        height: auto;
+    }
+    header div#buttonContainer{
+        justify-content: center;
+    }
+    header div#buttonContainer button{
+        margin: 5px;
+    }
+}
